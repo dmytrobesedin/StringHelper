@@ -3,8 +3,9 @@
 
 import Foundation
 
-public struct StringHelper {
-
+public struct StringHelper: Sendable {
+    public static let shared = StringHelper()
+    
     public init() { }
     
     ///  Check if a string is a palindrome
